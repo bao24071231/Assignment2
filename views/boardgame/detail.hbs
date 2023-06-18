@@ -1,0 +1,54 @@
+<div class="container-fluid text-center">
+    <section class="py-3 text-center container-fluid">
+        <div class="row py-lg-5 light-shade rounded">
+            <div class="col-lg-5 col-md-7 mx-auto">
+                <h1 class="fw-dark">Boardgame Detail</h1>
+            </div>
+        </div>
+        <br><br>
+    </section>
+    <br><br>
+    <div class="row content text-center container-fluid">
+        <div class="col-sm-1">
+        </div>
+        <div class="col-sm-10 text-center input light-shade rounded">
+            <section class="py-3 text-center container">
+                <div class="row justify-content-center align-items-center g-2">
+                    <div class="col">
+                        <div class="row justify-content-center align-items-center g-2">
+                            <img src="{{ boardgame.image }}" alt="" width="300" height="300">
+                        </div>
+                        <div class="row justify-content-center align-items-center g-2">
+                            <p name="desc">{{ boardgame.desc }}</p>
+                        </div>
+
+                    </div>
+                    <div class="col">
+                        <div class="row justify-content-left">
+                            <label for="">Name:</label>
+                            <p>{{boardgame.name}}</p>
+                        </div>
+                        <div class="row justify-content-left">
+                            <label for="">Type:</label>
+                            <p>{{boardgame.type}}</p>
+                        </div>
+                        <div class="row justify-content-left">
+                            <label for="">Years Active:</label>
+                            <p>{{ boardgame.years_active }}</p>
+                        </div>
+                        <div class="row justify-content-left">
+                            <label for="">Price:</label>
+                            <p>${{boardgame.price }}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-start align-items-start g-lg-2">
+                    <div class="col"></div>
+                    <div class="col"><a href="/boardgame" class="btn btn-primary">Return</a></div>
+                </div>
+            </section>
+        </div>
+        <div class="col-sm-1">
+        </div>
+    </div>
+</div>

@@ -1,0 +1,59 @@
+<div class="container-fluid text-center">
+    <section class="py-3 text-center container-fluid">
+        <div class="row py-lg-5 light-shade rounded">
+            <div class="col-lg-5 col-md-7 mx-auto">
+                <h1 class="fw-dark">Game Detail</h1>
+            </div>
+        </div>
+        <br><br>
+        <div class="row py-lg-5 light-shade rounded justify-content-center align-items-center g-2">
+            <div class="col-md-8 mx-auto">
+                <iframe src="https://www.youtube.com/embed/{{ game.video }}" width="480" height="270"></iframe>
+            </div>
+        </div>
+    </section>
+    <br><br>
+    <div class="row content text-center container-fluid">
+        <div class="col-sm-1">
+        </div>
+        <div class="col-sm-10 text-center input light-shade rounded">
+            <section class="py-3 text-center container">
+                <div class="row justify-content-center align-items-center g-2">
+                    <div class="col">
+                        <div class="row justify-content-center align-items-center g-2">
+                            <img src="{{game.image}}" alt="" width="300" height="300"> {{!-- /*{{game.image}}*/ --}}
+                        </div>
+                        <div class="row justify-content-center align-items-center g-2">
+                            <p name="desc">{{game.desc}}</p>
+                        </div>
+
+                    </div>
+                    <div class="col">
+                        <div class="row justify-content-left">
+                            <label for="">Name:</label>
+                            <p>{{game.name}}</p>
+                        </div>
+                        <div class="row justify-content-left">
+                            <label for="">Category:</label>
+                            <p>{{game.category}}</p>
+                        </div>
+                        <div class="row justify-content-left">
+                            <label for="">Release Date:</label>
+                            <p>{{ dateFormat game.release_date "DD-MM-YYYY" }}</p>
+                        </div>
+                        <div class="row justify-content-left">
+                            <label for="">Price:</label>
+                            <p>${{game.price}}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-start align-items-start g-lg-2">
+                    <div class="col"></div>
+                    <div class="col"><a href="/game" class="btn btn-primary">Return</a></div>
+                </div>
+            </section>
+        </div>
+        <div class="col-sm-1">
+        </div>
+    </div>
+</div>

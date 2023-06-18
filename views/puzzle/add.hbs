@@ -1,0 +1,63 @@
+<div class="container-fluid text-center">
+    <section class="py-3 text-center container">
+        <div class="row py-lg-5">
+            <div class="col-lg-6 col-md-8 mx-auto">
+                <h1 class="fw-dark">Add new puzzle</h1>
+            </div>
+        </div>
+    </section>
+    <div class="row content">
+        <div class="col-sm-2">
+        </div>
+        <div class="col-sm-8 text-center input border border-white">
+            <div class="col-sm-8 text-center container">
+                <form action="/puzzle/add" method="post">
+                    <br><br>
+                    <div class="input-group mb-3 align-items-center">
+                        <span class="input-group-text" id="basic-addon1">Name</span>
+                        <input type="text" class="form-control" name="name" required>
+                    </div>
+                    <div class="input-group mb-3 align-items-center">
+                        <span class="input-group-text" id="basic-addon1">Type</span>
+                        <select name="type" id="type" class="form-select form-select-md">
+                            <option value="Combination">Combination</option>
+                            <option value="Construction">Construction</option>
+                            <option value="Jigsaw">Jigsaw</option>
+                            <option value="Word">Word</option>
+                        </select>
+                    </div>
+                    <div class="input-group mb-3 align-items-center">
+                        <span class="input-group-text" id="basic-addon1">$</span>
+                        <input type="number" class="form-control" name="price" step=".01" min="1" required>
+                    </div>
+                    <div class="input-group mb-3 align-items-center">
+                        <span class="input-group-text" id="basic-addon1">Orginated Year</span>
+                        <input type="number" class="form-control" name="originated_year" max="2023" required>
+                    </div>
+                    <div class="input-group mb-3 align-items-center">
+                        <span class="input-group-text" id="basic-addon1">Image Link</span>
+                        <input type="text" class="form-control" name="image" required>
+                    </div>
+                    <div class="input-group mb-3 align-items-center">
+                        <span class="input-group-text">Description</span>
+                        <textarea class="form-control" name="desc" required></textarea>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-sm-3 text-center container">
+                            <a class="btn btn-danger" href="/puzzle">Cancel</a>
+                        </div>
+                        <div class="col-sm-3"></div>
+                        <div class="col-sm-3"></div>
+                        <div class="col-sm-3 text-center container">
+                            <button class="btn btn-primary" type="submit">Create</button>
+                        </div>
+                    </div>
+                    <br><br>
+                </form>
+            </div>
+        </div>
+        <div class="col-sm-2">
+        </div>
+    </div>
+</div>

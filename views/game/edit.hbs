@@ -1,0 +1,70 @@
+<div class="container-fluid text-center">
+    <section class="py-3 text-center container">
+        <div class="row py-lg-5 light-shade rounded">
+            <div class="col-lg-6 col-md-8 mx-auto">
+                <h1 class="fw-dark">Update game info</h1>
+            </div>
+        </div>
+    </section>
+    <div class="row content">
+        <div class="col-sm-2">
+        </div>
+        <div class="col-sm-8 text-center input light-shade rounded">
+            <div class="col-sm-8 text-center container">
+                <form action="/game/edit/{{ game._id }}" method="post">
+                    <br><br>
+                    <div class="input-group mb-3 align-items-center">
+                        <span class="input-group-text" id="basic-addon1">Name</span>
+                        <input type="text" class="form-control" name="name" value="{{game.name}}" required>
+                    </div>
+                    <div class="input-group mb-3 align-items-center">
+                        <span class="input-group-text" id="basic-addon1">Category</span>
+                        <select name="category" class="form-select form-select-md">
+                            <option value="{{game.category}}" hidden="hidden" selected="selected">{{game.category}}</option>
+                            <option value="Sports">Sports</option>
+                            <option value="Strategy">Strategy</option>
+                            <option value="Survival">Survival</option>
+                            <option value="RPG">RPG</option>
+                        </select>
+                    </div>
+                    <div class="input-group mb-3 align-items-center">
+                        <span class="input-group-text" id="basic-addon1">$</span>
+                        <input type="number" class="form-control" name="price" step=".01" min="1" value="{{game.price}}"
+                            required>
+                    </div>
+                    <div class="input-group mb-3 align-items-center">
+                        <span class="input-group-text" id="basic-addon1">Release Date</span>
+                        <input type="date" class="form-control" name="release_date"
+                            value="{{ dateFormat game.release_date "YYYY-MM-DD" }}" required>
+                    </div>
+                    <div class="input-group mb-3 align-items-center">
+                        <span class="input-group-text" id="basic-addon1">Image Link</span>
+                        <input type="text" class="form-control" name="image" value="{{game.image}}" required>
+                    </div>
+                    <div class="input-group mb-3 align-items-center">
+                        <span class="input-group-text" id="basic-addon1">Video</span>
+                        <input type="text" class="form-control" name="video" value="{{game.video}}" required>
+                    </div>
+                    <div class="input-group mb-3 align-items-center">
+                        <span class="input-group-text">Description</span>
+                        <textarea class="form-control" name="desc" required>{{game.desc}}</textarea>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-sm-3 text-center container">
+                            <a class="btn btn-danger" href="/game">Cancel</a>
+                        </div>
+                        <div class="col-sm-3"></div>
+                        <div class="col-sm-3"></div>
+                        <div class="col-sm-3 text-center container">
+                            <button class="btn btn-primary" type="submit">Update</button>
+                        </div>
+                    </div>
+                    <br><br>
+                </form>
+            </div>
+        </div>
+        <div class="col-sm-2">
+        </div>
+    </div>
+</div>

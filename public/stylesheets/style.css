@@ -1,0 +1,74 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: #73A5B1;
+}
+
+a {
+  color: #00B7FF;
+}
+
+nav {
+  position: sticky; top: 0;
+}
+
+h1{
+  color: #468847;;
+}
+
+.input{
+  background-color: dimgray;
+}
+
+.navbar {
+  margin-bottom: 0;
+  border-radius: 0;
+}
+
+/* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+.row.content {height: 450px}
+
+/* Set gray background color and 100% height */
+.sidenav {
+  padding-top: 20px;
+  background-color: #f1f1f1;
+  height: 100%;
+  left: 0;
+}
+
+/* Set black background color, white text and some padding */
+footer {
+  background-color: #555;
+  color: white;
+  padding: 15px;
+}
+
+/* On small screens, set height to 'auto' for sidenav and grid */
+@media screen and (max-width: 767px) {
+  .sidenav {
+    height: auto;
+    padding: 15px;
+  }
+  .row.content {height:auto;} 
+}
+
+.light-shade{
+ background-color: rgb(181, 186, 186);
+ color: #0f304e;
+}
+.light-accent{
+ background-color: #AC9F7A;
+}
+
+.main-brand-color{
+  background-color: #73A5B1;
+}
+
+
+.dark-accent{
+  background-color: #9A794D;
+}
+
+.dark-shades{
+  background-color: #365254;
+}
