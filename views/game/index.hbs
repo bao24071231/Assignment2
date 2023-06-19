@@ -30,6 +30,8 @@
                             <th scope="col">Category</th>
                             <th scope="col">Released Date</th>
                             <th scope="col">Price</th>
+                            <th>Quantity</th>
+                            <th>Video</th>
                             <th scope="col">Action</th>
                         </tr>
                     </thead>
@@ -41,6 +43,8 @@
                             <th>{{category}}</th>
                             <th>{{ dateFormat release_date "DD-MM-YYYY" }}</th>
                             <td>${{price}}</th>
+                            <td>{{quantity}}</td>
+                            <td><iframe src="https://youtube.com/embed/{{video}}" width="150" height="150"  frameborder="0"></iframe></td>
                             <th>
                                 <a class="btn btn-primary" href="/game/detail/{{_id}}">Info</a>
                                 <a class="btn btn-warning" href="/game/edit/{{_id}}">Edit</a>

@@ -8,6 +8,7 @@ var GameSchema = mongoose.Schema({
     release_date : Date,
     image : String,
     video : String,
+    quantity : Number
 })
 
 var GameModel = mongoose.model("games", GameSchema, "games")
