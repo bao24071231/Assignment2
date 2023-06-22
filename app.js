@@ -14,9 +14,10 @@ var app = express();
 
 var bodyParser = require('body-parser')
 var mongoose = require('mongoose')
-var url = "mongodb+srv://baohqgch210965:24072003@cluster0.csgo9td.mongodb.net/Assignment"
-//var local = "mongodb://127.0.0.1:27017/Test"
 app.use(bodyParser.urlencoded({extended: false}))
+var url = "mongodb+srv://quocbaohoang2003:FtYU7vqF6jEYdNJ5@assignment2cluster.dcz2w0m.mongodb.net/?retryWrites=true&w=majority/Assignment2"
+//var local = "mongodb://127.0.0.1:27017/Test"
+
 mongoose.connect(url)
 .then(()=>{ console.log('Connect succeed') })
 .catch((err)=>{ console.error(err)})
