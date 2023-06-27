@@ -15,7 +15,7 @@ var app = express();
 var bodyParser = require('body-parser')
 var mongoose = require('mongoose')
 app.use(bodyParser.urlencoded({extended: false}))
-var url = "mongodb+srv://quocbaohoang2003:FtYU7vqF6jEYdNJ5@assignment2cluster.dcz2w0m.mongodb.net/?retryWrites=true&w=majority/Assignment"
+var url = "mongodb+srv://quocbaohoang2003:FtYU7vqF6jEYdNJ5@assignment2cluster.dcz2w0m.mongodb.net/Assignment"
 //var local = "mongodb://127.0.0.1:27017/Test"
 
 mongoose.connect(url)
